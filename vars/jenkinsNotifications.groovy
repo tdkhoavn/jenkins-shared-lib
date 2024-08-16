@@ -1,5 +1,6 @@
 def notify(String status, String message, String credentialsId) {
   def colors = [
+      'Started': 'Accent', // blue
       'Success': 'Good', // green
       'Failure': 'Attention' // red
   ]
