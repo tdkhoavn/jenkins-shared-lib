@@ -68,7 +68,7 @@ def notify(String status, String message, String credentialsId) {
                             "type": "TextBlock",
                             "text": "Build Number:",
                             "weight": "Bolder",
-                            "color": "Attention"
+                            "color": "Accent"
                         },
                         {
                             "type": "TextBlock",
@@ -123,7 +123,7 @@ def notify(String status, String message, String credentialsId) {
                                 }
                             }
                         ]
-                    },
+                    }
                 }
             ]
         ]
