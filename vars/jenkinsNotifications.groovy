@@ -18,113 +18,113 @@ def notify(String status, String message, String credentialsId) {
         "attachments": [
             [
               "contentType": "application/vnd.microsoft.card.adaptive",
-              "content": {
+              "content": [
                     "\$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
                     "type": "AdaptiveCard",
                     "version": "1.3",
                     "body": [
-                        {
+                        [
                             "type": "TextBlock",
                             "size": "Medium",
                             "weight": "Bolder",
                             "text": "${title}"
-                        },
-                        {
+                        ],
+                        [
                             "type": "ColumnSet",
                             "columns": [
-                                {
+                                [
                                     "type": "Column",
                                     "items": [
-                                    {
-                                        "type": "Image",
-                                        "style": "Person",
-                                        "url": "https://ftp-chi.osuosl.org/pub/jenkins/art/jenkins-logo/1024x1024/logo.png",
-                                        "altText": "Jenkins",
-                                        "size": "Medium"
-                                    }
+                                        [
+                                            "type": "Image",
+                                            "style": "Person",
+                                            "url": "https://ftp-chi.osuosl.org/pub/jenkins/art/jenkins-logo/1024x1024/logo.png",
+                                            "altText": "Jenkins",
+                                            "size": "Medium"
+                                        ]
                                     ],
                                     "width": "auto"
-                                },
-                                {
+                                ],
+                                [
                                     "type": "Column",
                                     "items": [
-                                    {
-                                        "type": "TextBlock",
-                                        "weight": "Bolder",
-                                        "text": "Jenkins Pipelines",
-                                        "wrap": true
-                                    }
+                                        [
+                                            "type": "TextBlock",
+                                            "weight": "Bolder",
+                                            "text": "Jenkins Pipelines",
+                                            "wrap": true
+                                        ]
                                     ],
                                     "width": "auto"
-                                }
+                                ]
                             ]
-                        },
-                        {
+                        ],
+                        [
                             "type": "TextBlock",
                             "text": "${message}",
                             "wrap": true
-                        },
-                        {
+                        ],
+                        [
                             "type": "TextBlock",
                             "text": "Build Number:",
                             "weight": "Bolder",
                             "color": "Accent"
-                        },
-                        {
+                        ],
+                        [
                             "type": "TextBlock",
                             "text": "${env.BUILD_NUMBER}",
                             "wrap": true
-                        },
-                        {
+                        ],
+                        [
                             "type": "TextBlock",
                             "text": "Build URL:",
                             "weight": "Bolder",
                             "color": "Accent"
-                        },
-                        {
+                        ],
+                        [
                             "type": "TextBlock",
                             "text": "[${env.BUILD_URL}](${env.BUILD_URL})",
                             "wrap": true
-                        },
-                        {
+                        ],
+                        [
                             "type": "TextBlock",
                             "text": "Build Status:",
                             "weight": "Bolder",
                             "color": "Accent"
-                        },
-                        {
+                        ],
+                        [
                             "type": "TextBlock",
                             "weight": "Bolder",
                             "color": "${color}",
                             "text": "${status}",
                             "wrap": true
-                        },
-                        {
+                        ],
+                        [
                             "type": "TextBlock",
                             "text": "<at>${userName}</at>",
                             "wrap": true
-                        }
+                        ]
                     ],
                     "actions": [
-                        {
+                        [
                             "type": "Action.OpenUrl",
                             "title": "Open Build in Jenkins",
                             "url": "${env.BUILD_URL}"
-                        }
+                        ]
                     ],
-                    "msteams": {
+                    "msteams": [
                         "entities": [
-                            {
+                            [
                                 "type": "mention",
                                 "text": "<at>${env.userName}</at>",
-                                "mentioned": {
+                                "mentioned": [
                                     "id": "${env.userId}",
                                     "name": "${env.userName}"
-                                }
-                            }
+                                ]
+                            ]
                         ]
-                    }
-                }
+                    ]
+                ]
             ]
         ]
       ]
