@@ -65,39 +65,62 @@ def notify(String status, String message, String credentialsId) {
                             "wrap": true
                         ],
                         [
-                            "type": "TextBlock",
-                            "text": "Build Number:",
-                            "weight": "Bolder",
-                            "color": "Accent"
+                            "type": "ColumnSet",
+                            "columns": [
+                                [
+                                    "type": "Column",
+                                    "width": "auto",
+                                    "items": [
+                                        [
+                                            "type": "TextBlock",
+                                            "text": "Build Number:",
+                                            "weight": "Bolder",
+                                            "color": "Accent"
+                                        ]
+                                    ]
+                                ],
+                                [
+                                    "type": "Column",
+                                    "width": "auto",
+                                    "items": [
+                                        [
+                                            "type": "TextBlock",
+                                            "text": "${env.BUILD_NUMBER}",
+                                            "wrap": true
+                                        ],
+                                    ]
+                                ]
+                            ]
                         ],
                         [
-                            "type": "TextBlock",
-                            "text": "${env.BUILD_NUMBER}",
-                            "wrap": true
-                        ],
-                        [
-                            "type": "TextBlock",
-                            "text": "Build URL:",
-                            "weight": "Bolder",
-                            "color": "Accent"
-                        ],
-                        [
-                            "type": "TextBlock",
-                            "text": "[${env.BUILD_URL}](${env.BUILD_URL})",
-                            "wrap": true
-                        ],
-                        [
-                            "type": "TextBlock",
-                            "text": "Build Status:",
-                            "weight": "Bolder",
-                            "color": "Accent"
-                        ],
-                        [
-                            "type": "TextBlock",
-                            "weight": "Bolder",
-                            "color": "${color}",
-                            "text": "${status}",
-                            "wrap": true
+                            "type": "ColumnSet",
+                            "columns": [
+                                [
+                                    "type": "Column",
+                                    "width": "auto",
+                                    "items": [
+                                        [
+                                            "type": "TextBlock",
+                                            "text": "Build Status:",
+                                            "weight": "Bolder",
+                                            "color": "Accent"
+                                        ]
+                                    ]
+                                ],
+                                [
+                                    "type": "Column",
+                                    "width": "auto",
+                                    "items": [
+                                        [
+                                            "type": "TextBlock",
+                                            "weight": "Bolder",
+                                            "color": "${color}",
+                                            "text": "${status}",
+                                            "wrap": true
+                                        ],
+                                    ]
+                                ]
+                            ]
                         ],
                         [
                             "type": "TextBlock",
