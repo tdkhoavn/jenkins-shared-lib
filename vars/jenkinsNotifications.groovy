@@ -116,10 +116,10 @@ def notify(String status, String message, String credentialsId) {
                         "entities": [
                             {
                                 "type": "mention",
-                                "text": "<at>${userName}</at>",
+                                "text": "<at>${env.userName}</at>",
                                 "mentioned": {
-                                    "id": "${userId}",
-                                    "name": "${userName}"
+                                    "id": "${env.userId}",
+                                    "name": "${env.userName}"
                                 }
                             }
                         ]
