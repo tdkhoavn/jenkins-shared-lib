@@ -125,7 +125,7 @@ def notify(String status, String message, String credentialsId) {
                         ],
                         [
                             "type": "TextBlock",
-                            "text": "<at>${mentionTag}</at>",
+                            "text": "<at>${tagName}</at>",
                             "wrap": true
                         ]
                     ],
@@ -140,7 +140,7 @@ def notify(String status, String message, String credentialsId) {
                         "entities": [
                             [
                                 "type": "mention",
-                                "text": "<at>${mentionTag}</at>",
+                                "text": "<at>${tagName}</at>",
                                 "mentioned": [
                                     "id": "${tagId}",
                                     "name": "${tagName}"
