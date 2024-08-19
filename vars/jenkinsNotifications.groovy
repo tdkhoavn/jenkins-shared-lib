@@ -143,7 +143,8 @@ def notify(String status, String message, String credentialsId) {
                                 "text": "<at>${tagName}</at>",
                                 "mentioned": [
                                     "id": "${tagId}",
-                                    "name": "${tagName}"
+                                    "name": "${tagName}",
+                                    "type": "tag"
                                 ]
                             ]
                         ]
